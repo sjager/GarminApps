@@ -48,8 +48,8 @@
 <entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="19" pc="268436919" symbol="onPosition"/>
 <entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="20" pc="268436967" symbol="onPosition"/>
 <entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="21" pc="268436998" symbol="onPosition"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="26" pc="268437032" symbol="initializeListener"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="31" pc="268437074" symbol="getInitialView"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="28" pc="268437032" symbol="initializeListener"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="33" pc="268437074" symbol="getInitialView"/>
 <entry filename="source\\ChooseHome.mc" lineNum="13" pc="268437145" symbol="onPreviousPage"/>
 <entry filename="source\\ChooseHome.mc" lineNum="14" pc="268437163" symbol="onPreviousPage"/>
 <entry filename="source\\ChooseHome.mc" lineNum="19" pc="268437194" symbol="onKey"/>
