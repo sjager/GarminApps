@@ -1,4 +1,9 @@
 using Toybox.Application as App;
+using Toybox.System as Sys;
+
+enum {
+	HOME_COORDS
+}
 
 class TheresNoPlaceLikeHomeApp extends App.AppBase {
 
@@ -9,22 +14,26 @@ class TheresNoPlaceLikeHomeApp extends App.AppBase {
 	    
     function onPosition(info)
 	{
-		// Fake data since data types are not precise enough to use simulated data
-		var fakeLats = [70, 27.357, -51.33];
-		var fakeLongs = [1.26, -33.992, 107];
-		var rand = Math.rand()%3;
-		
-		// Store data into data store
+		//Sys.println("Position " +
+		//info.position.toGeoString(Position.GEO_DM));
+		Sys.println("Set Coords");
 		var app = App.getApp();
 		app.setProperty("Current_Coords", info.position.toGeoString(Position.GEO_DM));
-		app.setProperty("Current_Coord_Latitude", fakeLats[rand].toString());
-		app.setProperty("Current_Coord_Longitude", fakeLongs[rand].toString());
+		//Sys.println(info.position.toDegrees()[0]);
+		app.setProperty("Current_Coord_Latitude", info.position.toDegrees()[0].toString());
+		app.setProperty("Current_Coord_Longitude", info.position.toDegrees()[1].toString());
 	}
 	
 	function initializeListener()
 	{
-		Position.enableLocationEvents(1, method(:onPosition));
+		Position.enableLocationEvents(
+		1,
+		method(:onPosition));
 	}
+
+    //! onStop() is called when your application is exiting
+    function onStop() {
+    }
 
     //! Return the initial view of your application here
     function getInitialView() {

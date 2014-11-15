@@ -1,4 +1,6 @@
 using Toybox.Application as App;
+using Toybox.System as Sys;
+
 
 class TheresNoPlaceLikeHomeApp extends App.AppBase {
 
@@ -23,8 +25,14 @@ class TheresNoPlaceLikeHomeApp extends App.AppBase {
 	
 	function initializeListener()
 	{
-		Position.enableLocationEvents(1, method(:onPosition));
+		Position.enableLocationEvents(
+		1,
+		method(:onPosition));
 	}
+
+    //! onStop() is called when your application is exiting
+    function onStop() {
+    }
 
     //! Return the initial view of your application here
     function getInitialView() {

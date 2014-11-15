@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
 
@@ -7,7 +8,6 @@ var timer;
 
 class ViewPositionDelegate extends Ui.BehaviorDelegate
 {
-	// Go to "Select Home" screen
 	function onMenu()
 	{
 		timer.stop();
@@ -20,45 +20,52 @@ class ViewPosition extends Ui.DataField {
 	function redraw() {
 		Ui.requestUpdate();
 	}
+
+	function initialize() {
+
+	}
 	
-	// Refresh this view every half-second
 	function onShow() {
 		timer = new Timer.Timer();
     	timer.start( method(:redraw), 500, true);
 	}
 	
+	function onLayout(dc) {
+
+	}
+	
 	function onUpdate(dc)
 	{
 		dc.clear();
-		
-		// Set Background Color
-		dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_DK_GRAY);
+		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLUE);
 		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 		
-		// Get data from data store
 		var app = App.getApp();
+		//var homeCoordLong = app.getProperty("Home_Coords");
 		var homeCoordLat = app.getProperty("Home_Coord_Latitude");
 		var homeCoordLong = app.getProperty("Home_Coord_Longitude");
 		var curCoordLat = app.getProperty("Current_Coord_Latitude");
 		var curCoordLong = app.getProperty("Current_Coord_Longitude");
-		
-		// If "Home" coordinates have been entered
 		if(homeCoordLong != null && homeCoordLat != null)
 		{
+			Sys.println(homeCoordLat + " in View Position");
+			Sys.println(homeCoordLong + " in View Position");
+			Sys.println(curCoordLat + " in View Position");
+			Sys.println(curCoordLong + " in View Position");
 			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
 			var distance = computeDist(homeCoordLat, homeCoordLong, curCoordLat, curCoordLong).toString();
-			var distanceText = distance + " km";
-			dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "Distance from home:", Gfx.TEXT_JUSTIFY_CENTER);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, distanceText, Gfx.TEXT_JUSTIFY_CENTER);
+			Sys.println(distance);
+			Sys.println("----------");
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "Distance from home", Gfx.TEXT_JUSTIFY_CENTER);
+			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, distance + "km", Gfx.TEXT_JUSTIFY_CENTER);
+			
 		} else {
 			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "No home position recorded", Gfx.TEXT_JUSTIFY_CENTER);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, "Press \"Menu\" to pick your home position", Gfx.TEXT_JUSTIFY_CENTER);
+			var text = "No Home Position Recorded";
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_SMALL, text, Gfx.TEXT_JUSTIFY_CENTER);
 		}
 	}
 	
-	// Compute the distance between two coordinates in kilometers.
-	// Parameters are the Latitude and Longitude of the two points in degrees, represented as strings.
 	function computeDist(pt1Lat, pt1Long, pt2Lat, pt2Long) {
 	
 		//Convert degree strings to float numbers
@@ -66,6 +73,11 @@ class ViewPosition extends Ui.DataField {
 		var point1Long = pt1Long.toFloat();
 		var point2Lat = pt2Lat.toFloat();
 		var point2Long = pt2Long.toFloat();
+		
+		Sys.println(point1Lat + " after conversion");
+		Sys.println(point1Long + " after conversion");
+		Sys.println(point2Lat + " after conversion");
+		Sys.println(point2Long + " after conversion");
 		
 		var radius = 6371;
 		
@@ -75,14 +87,19 @@ class ViewPosition extends Ui.DataField {
 		var dLat = (point2Lat - point1Lat) * (3.14159/180.0);
 		var dLong = (point2Long - point1Long) * (3.14159/180.0);
 		
+		Sys.println("radLat1=" + radLat1);
+		Sys.println("radLat2" + radLat2);
+		Sys.println("dLat" + dLat);
+		Sys.println("dLong" + dLong);		
+		
 		//Use the Haversine formula to calculate the great-circle distance between two coordinates
 		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         	Math.cos(radLat1) * Math.cos(radLat2) *
         	Math.sin(dLong/2) * Math.sin(dLong/2);
-        
-        // Avoid DivideByZero error
+        Sys.println("a=" + a);
         if(a > .000000001) {
 			var c = 2 * atan2(Math.sqrt(a), Math.sqrt(1-a));
+			Sys.println("c=" + c);
 			var dist = radius * c;
 			return dist;
 		} else {

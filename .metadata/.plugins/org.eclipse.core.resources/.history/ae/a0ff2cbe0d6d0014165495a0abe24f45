@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
 
@@ -20,11 +21,19 @@ class ViewPosition extends Ui.DataField {
 	function redraw() {
 		Ui.requestUpdate();
 	}
+
+	function initialize() {
+
+	}
 	
-	// Refresh this view every half-second
+	// Refresh this page every half-second
 	function onShow() {
 		timer = new Timer.Timer();
     	timer.start( method(:redraw), 500, true);
+	}
+	
+	function onLayout(dc) {
+
 	}
 	
 	function onUpdate(dc)
@@ -52,8 +61,8 @@ class ViewPosition extends Ui.DataField {
 			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, distanceText, Gfx.TEXT_JUSTIFY_CENTER);
 		} else {
 			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "No home position recorded", Gfx.TEXT_JUSTIFY_CENTER);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, "Press \"Menu\" to pick your home position", Gfx.TEXT_JUSTIFY_CENTER);
+			var text = "No Home Position Recorded";
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_SMALL, text, Gfx.TEXT_JUSTIFY_CENTER);
 		}
 	}
 	
@@ -79,10 +88,10 @@ class ViewPosition extends Ui.DataField {
 		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         	Math.cos(radLat1) * Math.cos(radLat2) *
         	Math.sin(dLong/2) * Math.sin(dLong/2);
-        
-        // Avoid DivideByZero error
+        Sys.println("a=" + a);
         if(a > .000000001) {
 			var c = 2 * atan2(Math.sqrt(a), Math.sqrt(1-a));
+			Sys.println("c=" + c);
 			var dist = radius * c;
 			return dist;
 		} else {

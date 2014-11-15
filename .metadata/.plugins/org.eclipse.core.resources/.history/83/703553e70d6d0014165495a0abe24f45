@@ -1,5 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
 using Toybox.Timer as Timer;
@@ -11,6 +12,7 @@ class ChooseHomeDelegate extends Ui.BehaviorDelegate
 	function onPreviousPage()
 	{
 		timer.stop();
+		Sys.println("Menu");
 		Ui.popView(Ui.SLIDE_RIGHT);
 	}
 	
@@ -20,15 +22,13 @@ class ChooseHomeDelegate extends Ui.BehaviorDelegate
 		if(evt.getKey() == Ui.KEY_ENTER)
 		{
 			var app = App.getApp();
-			// get current data from store
-			var curCoords = app.getProperty("Current_Coords").toString();
-			var curLat = app.getProperty("Current_Coord_Latitude").toString();
-			var curLong = app.getProperty("Current_Coord_Longitude").toString();
-			// store current data as "home" data
-			app.setProperty("Home_Coords", curCoords);
-			app.setProperty("Home_Coord_Latitude", curLat);
-			app.setProperty("Home_Coord_Longitude", curLong);
-			
+			var thing = app.getProperty("Current_Coords").toString();
+			var thing1 = app.getProperty("Current_Coord_Latitude").toString();
+			var thing2 = app.getProperty("Current_Coord_Longitude").toString();
+			app.setProperty("Home_Coords", thing);
+			app.setProperty("Home_Coord_Latitude", thing1);
+			app.setProperty("Home_Coord_Longitude", thing2);
+			Sys.println(app.getProperty("Home_Coords"));
 			Ui.popView(Ui.SLIDE_RIGHT);
 		}
 	}
@@ -39,6 +39,11 @@ class ChooseHome extends Ui.View {
 	{
 		Ui.requestUpdate();
 	}
+		
+	//! Load your resources here
+    function onLayout(dc) {
+    	
+    }
 
     //! Refresh this view every half second
     function onShow() {
@@ -59,9 +64,9 @@ class ChooseHome extends Ui.View {
 		var app = App.getApp();
 		var currentCoords = app.getProperty("Current_Coords").toString();
 		
-		// Draw text
 		dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-		dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "Choose your home position:", Gfx.TEXT_JUSTIFY_CENTER);
+		var text = "Choose your home position:";
+		dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, text, Gfx.TEXT_JUSTIFY_CENTER);
 		dc.drawText(dc.getWidth()/2, dc.getHeight()/3*2, Gfx.FONT_SMALL, currentCoords, Gfx.TEXT_JUSTIFY_CENTER);
 	}
 	
