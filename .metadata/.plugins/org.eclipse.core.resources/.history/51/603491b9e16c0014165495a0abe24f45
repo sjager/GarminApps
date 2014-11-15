@@ -2,7 +2,7 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Lang as Lang;
-using Toybox.Application as App;
+using Toybox.Application as AppBase;
 
 class ChooseHomeDelegate extends Ui.BehaviorDelegate
 {
@@ -16,8 +16,7 @@ class ChooseHomeDelegate extends Ui.BehaviorDelegate
 	{
 		if(evt.getKey() == Ui.KEY_ENTER)
 		{
-			var app = App.getApp();
-			app.setProperty("HomeCoords", "yo dawg");
+			AppBase.setProperty("HomeCoords", "yo dawg");
 			Sys.println("ENTER");
 			Ui.popView(Ui.SLIDE_RIGHT);
 		}

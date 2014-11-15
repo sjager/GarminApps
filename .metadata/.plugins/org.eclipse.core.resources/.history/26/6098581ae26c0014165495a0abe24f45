@@ -30,7 +30,7 @@ class ViewPosition extends Ui.View {
 	
 		var app = App.getApp();
 	
-		var homeCoords = app.getProperty("HomeCoords"); 
+		var homeCoords = App.getProperty("HomeCoords"); 
 		//AppBase.getProperty("HomeCoords");
 		if(homeCoords != null)
 		{

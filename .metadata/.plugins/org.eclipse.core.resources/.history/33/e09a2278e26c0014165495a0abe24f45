@@ -1,9 +1,5 @@
 using Toybox.Application as App;
 
-enum {
-	HOME_COORDS
-}
-
 class TheresNoPlaceLikeHomeApp extends App.AppBase {
 
     //! onStart() is called on application start up

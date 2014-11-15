@@ -16,8 +16,7 @@ class ChooseHomeDelegate extends Ui.BehaviorDelegate
 	{
 		if(evt.getKey() == Ui.KEY_ENTER)
 		{
-			var app = App.getApp();
-			app.setProperty("HomeCoords", "yo dawg");
+			App.setProperty("HomeCoords", "yo dawg");
 			Sys.println("ENTER");
 			Ui.popView(Ui.SLIDE_RIGHT);
 		}

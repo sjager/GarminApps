@@ -28,9 +28,7 @@ class ViewPosition extends Ui.View {
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
 		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 	
-		var app = App.getApp();
-	
-		var homeCoords = app.getProperty("HomeCoords"); 
+		var homeCoords = App.getProperty("HomeCoords"); 
 		//AppBase.getProperty("HomeCoords");
 		if(homeCoords != null)
 		{

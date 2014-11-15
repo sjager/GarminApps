@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="source\\ViewPosition.mc" lineNum="10" pc="268435458" symbol="onMenu"/>
-<entry filename="source\\ViewPosition.mc" lineNum="11" pc="268435479" symbol="onMenu"/>
-<entry filename="source\\ViewPosition.mc" lineNum="27" pc="268435561" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435582" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="29" pc="268435618" symbol="onUpdate"/>
-<entry filename="source\\TheresNoPlaceLikeHomeView.mc" lineNum="19" pc="268435672" symbol="onUpdate"/>
-<entry filename="source\\TheresNoPlaceLikeHomeView.mc" lineNum="20" pc="268435684" symbol="onUpdate"/>
-<entry filename="source\\TheresNoPlaceLikeHomeView.mc" lineNum="21" pc="268435720" symbol="onUpdate"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="15" pc="268435774" symbol="getInitialView"/>
-<entry filename="source\\ChooseHome.mc" lineNum="10" pc="268435845" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268435866" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="16" pc="268435897" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="18" pc="268435924" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268435945" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="36" pc="268435986" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="37" pc="268436022" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="11" pc="268435458" symbol="onMenu"/>
+<entry filename="source\\ViewPosition.mc" lineNum="12" pc="268435479" symbol="onMenu"/>
+<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435561" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="29" pc="268435597" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="31" pc="268435641" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="33" pc="268435658" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="35" pc="268435676" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="37" pc="268435683" symbol="onUpdate"/>
+<entry filename="source\\TheresNoPlaceLikeHomeView.mc" lineNum="19" pc="268435714" symbol="onUpdate"/>
+<entry filename="source\\TheresNoPlaceLikeHomeView.mc" lineNum="20" pc="268435726" symbol="onUpdate"/>
+<entry filename="source\\TheresNoPlaceLikeHomeView.mc" lineNum="21" pc="268435762" symbol="onUpdate"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="19" pc="268435816" symbol="getInitialView"/>
+<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268435887" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="12" pc="268435908" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="17" pc="268435939" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268435966" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="20" pc="268435983" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="21" pc="268436005" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="22" pc="268436026" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="39" pc="268436067" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="40" pc="268436103" symbol="onUpdate"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -49,7 +54,7 @@
 <entry field="true" id="32940" symbol="SUB_SPORT_CARDIO_TRAINING"/>
 <entry id="33316" symbol="&lt;deu&gt;"/>
 <entry id="32803" method="true" symbol="makeImageRequest"/>
-<entry id="14" module="true" symbol="Menus"/>
+<entry id="15" module="true" symbol="Menus"/>
 <entry id="3" module="true" symbol="globals_Rez_Drawables"/>
 <entry id="32775" module="true" symbol="Toybox_Position"/>
 <entry id="33312" symbol="&lt;dut&gt;"/>
@@ -170,7 +175,7 @@
 <entry field="true" id="33378" symbol="DATA_PAYLOAD_LENGTH"/>
 <entry id="32988" method="true" symbol="fillRectangle"/>
 <entry id="32850" object="true" symbol="Info"/>
-<entry id="15" module="true" symbol="Layouts"/>
+<entry id="16" module="true" symbol="Layouts"/>
 <entry id="32865" object="true" symbol="Stats"/>
 <entry field="true" id="32953" symbol="FONT_XTINY"/>
 <entry id="32989" method="true" symbol="fillRoundedRectangle"/>
@@ -308,7 +313,7 @@
 <entry id="32983" method="true" symbol="drawBitmap"/>
 <entry id="32855" method="true" symbol="toDegrees"/>
 <entry field="true" id="33099" symbol="PUSH_VIEW"/>
-<entry id="11" object="true" symbol="TheresNoPlaceLikeHomeApp"/>
+<entry id="12" object="true" symbol="TheresNoPlaceLikeHomeApp"/>
 <entry id="33206" method="true" symbol="testSub"/>
 <entry field="true" id="32939" symbol="SUB_SPORT_INDOOR_SKIING"/>
 <entry field="true" id="33401" symbol="messagePeriod"/>
@@ -392,7 +397,7 @@
 <entry id="32976" object="true" symbol="Dc"/>
 <entry id="32829" method="true" symbol="pow"/>
 <entry field="true" id="33369" symbol="NETWORK_PLUS"/>
-<entry id="13" object="true" symbol="ChooseHome"/>
+<entry id="14" object="true" symbol="ChooseHome"/>
 <entry field="true" id="32910" symbol="SPORT_MOUNTAINEERING"/>
 <entry field="true" id="33244" symbol="startTime"/>
 <entry field="true" id="32876" symbol="min"/>
@@ -492,6 +497,7 @@
 <entry field="true" id="33181" symbol="SECONDS_PER_MINUTE"/>
 <entry id="33281" symbol="may"/>
 <entry field="true" id="33419" symbol="DEFAULT_RADIO_FREQUENCY"/>
+<entry field="true" id="11" symbol="HOME_COORDS"/>
 <entry field="true" id="33108" symbol="width"/>
 <entry id="33161" method="true" symbol="onNextPage"/>
 <entry field="true" id="32842" symbol="QUALITY_USABLE"/>
@@ -611,7 +617,7 @@
 <entry id="33114" symbol="mInitialValue"/>
 <entry field="true" id="33039" symbol="KEY_LIGHT"/>
 <entry field="true" id="33384" symbol="deviceType"/>
-<entry id="12" object="true" symbol="ChooseHomeDelegate"/>
+<entry id="13" object="true" symbol="ChooseHomeDelegate"/>
 <entry field="true" id="33348" symbol="MSG_ID_RESET_SYSTEM"/>
 <entry field="true" id="32937" symbol="SUB_SPORT_EXERCISE"/>
 <entry id="32992" method="true" symbol="getWidth"/>
