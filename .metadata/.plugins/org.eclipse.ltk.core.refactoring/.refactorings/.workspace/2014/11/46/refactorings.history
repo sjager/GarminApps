@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;There&apos;sNoPlaceLikeHome/source/TheresNoPlaceLikeHomeView.mc&apos;" deleteContents="false" description="Delete resource &apos;There&apos;sNoPlaceLikeHome/source/TheresNoPlaceLikeHomeView.mc&apos;" element1="/There&apos;sNoPlaceLikeHome/source/TheresNoPlaceLikeHomeView.mc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1416071024167"/>
+</session>
