@@ -3,22 +3,27 @@
 <pcToLineNum>
 <entry filename="source\\ViewPosition.mc" lineNum="11" pc="268435458" symbol="onMenu"/>
 <entry filename="source\\ViewPosition.mc" lineNum="12" pc="268435479" symbol="onMenu"/>
-<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435561" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="29" pc="268435597" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="31" pc="268435641" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="33" pc="268435658" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="35" pc="268435676" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="37" pc="268435683" symbol="onUpdate"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="19" pc="268435714" symbol="getInitialView"/>
-<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268435785" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="12" pc="268435806" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="17" pc="268435837" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268435864" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="20" pc="268435881" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="21" pc="268435903" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="22" pc="268435924" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="39" pc="268435965" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="40" pc="268436001" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="25" pc="268435558" symbol="compute"/>
+<entry filename="source\\ViewPosition.mc" lineNum="26" pc="268435579" symbol="compute"/>
+<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435596" symbol="compute"/>
+<entry filename="source\\ViewPosition.mc" lineNum="30" pc="268435614" symbol="compute"/>
+<entry filename="source\\ViewPosition.mc" lineNum="32" pc="268435621" symbol="compute"/>
+<entry filename="source\\ViewPosition.mc" lineNum="34" pc="268435627" symbol="compute"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="12" pc="268435639" symbol="onStart"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="20" pc="268435654" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="21" pc="268435671" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="28" pc="268435722" symbol="initializeListener"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="39" pc="268435767" symbol="getInitialView"/>
+<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268435838" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="12" pc="268435859" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="17" pc="268435890" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268435917" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="20" pc="268435934" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="23" pc="268435961" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="26" pc="268435979" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="27" pc="268436000" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="44" pc="268436041" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="45" pc="268436077" symbol="onUpdate"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -155,6 +160,7 @@
 <entry id="32795" module="true" symbol="Position"/>
 <entry id="32987" method="true" symbol="fillPolygon"/>
 <entry field="true" id="33349" symbol="MSG_ID_OPEN_CHANNEL"/>
+<entry id="17" method="true" symbol="initializeListener"/>
 <entry field="true" id="32954" symbol="FONT_TINY"/>
 <entry id="33183" symbol="getDayHash"/>
 <entry id="33305" symbol="color"/>
@@ -551,6 +557,7 @@
 <entry field="true" id="33246" symbol="timerTime"/>
 <entry field="true" id="33268" symbol="swimEfficency"/>
 <entry id="33186" method="true" symbol="duration"/>
+<entry id="16" method="true" symbol="onPosition"/>
 <entry field="true" id="33416" symbol="DEFAULT_DEVICE_TYPE"/>
 <entry id="33242" method="true" symbol="getActivityInfo"/>
 <entry field="true" id="33264" symbol="averageCadence"/>
@@ -694,19 +701,26 @@
 <functionEntry name="onMenu">
 <documentation/>
 </functionEntry>
-<functionEntry name="onLayout">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+<functionEntry name="initialize">
+<documentation/>
 </functionEntry>
-<functionEntry name="onShow">
-<documentation><![CDATA[<div class="description"> Restore the state of the app and prepare the view to be shown<br/></div>]]></documentation>
+<functionEntry name="compute">
+<param id="info"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="onUpdate">
 <param id="dc"/>
-<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+<documentation/>
 </functionEntry>
 <functionEntry name="onStart">
 <documentation><![CDATA[<div class="description"> onStart() is called on application start up<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onPosition">
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initializeListener">
+<documentation/>
 </functionEntry>
 <functionEntry name="onStop">
 <documentation><![CDATA[<div class="description"> onStop() is called when your application is exiting<br/></div>]]></documentation>

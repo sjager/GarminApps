@@ -13,16 +13,18 @@ class ViewPositionDelegate extends Ui.BehaviorDelegate
 	}
 }
 
-class ViewPosition extends Ui.DataField {
+class ViewPosition extends Ui.SimpleDataField {
 	function initialize()
 	{
-		
+		label = "Distance from Home:";
 	}
 	
 	//! Update the view
 	function compute(info)
 	{
-		Sys.println("Compute Function");
+		dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_GREEN);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+	
 		var app = App.getApp();
 	
 		var homeCoordLong = app.getProperty("Home_Coord_Longitude"); 
@@ -30,14 +32,6 @@ class ViewPosition extends Ui.DataField {
 		if(homeCoordLong != null)
 		{
 			return homeCoordLong;
-		} else {
-			return "none";
 		}
-	}
-	
-	function onUpdate(dc)
-	{
-		//dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-		//dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 	}
 }

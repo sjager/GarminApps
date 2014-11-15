@@ -29,15 +29,15 @@ class ViewPosition extends Ui.DataField {
 		//AppBase.getProperty("HomeCoords");
 		if(homeCoordLong != null)
 		{
-			return homeCoordLong;
+			return 1;
 		} else {
-			return "none";
+			return -1;
 		}
 	}
 	
 	function onUpdate(dc)
 	{
-		//dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-		//dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 	}
 }

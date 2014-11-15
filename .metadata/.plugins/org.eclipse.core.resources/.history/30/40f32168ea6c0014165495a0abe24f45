@@ -1,5 +1,4 @@
 using Toybox.Application as App;
-using Toybox.System as Sys;
 
 enum {
 	HOME_COORDS
@@ -11,16 +10,11 @@ class TheresNoPlaceLikeHomeApp extends App.AppBase {
     function onStart() {
     	initializeListener();
     }
-	    
+    
     function onPosition(info)
 	{
-		//Sys.println("Position " +
-		//info.position.toGeoString(Position.GEO_DM));
-
-		var app = App.getApp();
-		app.setProperty("Current_Coords", info.position.toGeoString(Position.GEO_DM));
-		//app.setProperty("Current_Coord_Latitude", info.position.toDegrees()[0]);
-		//app.setProperty("Current_Coord_Longitude", info.position.toDegrees()[1]);
+		Sys.println("Position " +
+		info.position.toGeoString(Position.GEO_DM));
 	}
 	
 	function initializeListener()

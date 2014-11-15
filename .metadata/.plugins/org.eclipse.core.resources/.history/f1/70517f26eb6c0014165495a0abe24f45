@@ -13,31 +13,28 @@ class ViewPositionDelegate extends Ui.BehaviorDelegate
 	}
 }
 
-class ViewPosition extends Ui.DataField {
-	function initialize()
+class ViewPosition extends Ui.View {
+	//! Load your resources here
+    function onLayout(dc) {
+    }
+
+    //! Restore the state of the app and prepare the view to be shown
+    function onShow() {
+    }
+
+    //! Update the view
+	function onUpdate(dc)
 	{
-		
-	}
+		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_GREEN);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 	
-	//! Update the view
-	function compute(info)
-	{
-		Sys.println("Compute Function");
 		var app = App.getApp();
 	
 		var homeCoordLong = app.getProperty("Home_Coord_Longitude"); 
 		//AppBase.getProperty("HomeCoords");
-		if(homeCoordLong != null)
+		if(homeCoords != null)
 		{
-			return homeCoordLong;
-		} else {
-			return "none";
+			Sys.println(homeCoordLong);
 		}
-	}
-	
-	function onUpdate(dc)
-	{
-		//dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-		//dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 	}
 }

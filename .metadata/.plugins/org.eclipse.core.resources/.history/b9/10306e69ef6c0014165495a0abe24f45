@@ -17,7 +17,7 @@ class ChooseHomeDelegate extends Ui.BehaviorDelegate
 		if(evt.getKey() == Ui.KEY_ENTER)
 		{
 			var app = App.getApp();
-			var thing = app.getProperty("Current_Coords").toString();
+			var thing = app.getProperty("Current_Coords");
 			//var thing1 = app.getProperty("Current_Coord_Latitude");
 			//var thing2 = app.getProperty("Current_Coord_Longitude");
 			Sys.println(thing);

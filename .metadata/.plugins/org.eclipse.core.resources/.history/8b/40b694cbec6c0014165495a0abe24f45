@@ -16,7 +16,7 @@ class ViewPositionDelegate extends Ui.BehaviorDelegate
 class ViewPosition extends Ui.DataField {
 	function initialize()
 	{
-		
+		label = "Distance from Home:";
 	}
 	
 	//! Update the view
@@ -33,11 +33,5 @@ class ViewPosition extends Ui.DataField {
 		} else {
 			return "none";
 		}
-	}
-	
-	function onUpdate(dc)
-	{
-		//dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-		//dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 	}
 }

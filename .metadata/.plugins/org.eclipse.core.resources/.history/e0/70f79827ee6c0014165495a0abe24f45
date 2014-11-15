@@ -37,7 +37,7 @@ class ViewPosition extends Ui.DataField {
 	
 	function onUpdate(dc)
 	{
-		//dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-		//dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
+		dc.drawRectangle(x, y, width, height)
 	}
 }
