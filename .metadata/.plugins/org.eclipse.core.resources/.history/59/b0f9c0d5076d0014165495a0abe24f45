@@ -88,7 +88,7 @@ class ViewPosition extends Ui.DataField {
 		var dLong = (point2Long - point1Long) * (3.14159/180.0);
 		
 		Sys.println("radLat1=" + radLat1);
-		Sys.println("radLat2" + radLat2);
+		Sys.println("dLat" + dLat);
 		Sys.println("dLat" + dLat);
 		Sys.println("dLong" + dLong);		
 		

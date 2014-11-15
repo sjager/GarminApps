@@ -87,11 +87,6 @@ class ViewPosition extends Ui.DataField {
 		var dLat = (point2Lat - point1Lat) * (3.14159/180.0);
 		var dLong = (point2Long - point1Long) * (3.14159/180.0);
 		
-		Sys.println("radLat1=" + radLat1);
-		Sys.println("radLat2" + radLat2);
-		Sys.println("dLat" + dLat);
-		Sys.println("dLong" + dLong);		
-		
 		//Use the Haversine formula to calculate the great-circle distance between two coordinates
 		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         	Math.cos(radLat1) * Math.cos(radLat2) *

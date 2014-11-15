@@ -11,6 +11,7 @@ class ViewPositionDelegate extends Ui.BehaviorDelegate
 	function onMenu()
 	{
 		timer.stop();
+		Sys.println("Position");
 		Ui.pushView(new ChooseHome(), new ChooseHomeDelegate(), Ui.SLIDE_LEFT);
 	}
 }
@@ -37,6 +38,7 @@ class ViewPosition extends Ui.DataField {
 	function onUpdate(dc)
 	{
 		dc.clear();
+		Sys.println("View Position Screen");
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLUE);
 		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 		
@@ -48,16 +50,12 @@ class ViewPosition extends Ui.DataField {
 		var curCoordLong = app.getProperty("Current_Coord_Longitude");
 		if(homeCoordLong != null && homeCoordLat != null)
 		{
-			Sys.println(homeCoordLat + " in View Position");
-			Sys.println(homeCoordLong + " in View Position");
-			Sys.println(curCoordLat + " in View Position");
-			Sys.println(curCoordLong + " in View Position");
+			Sys.println(homeCoordLat + "in View Position");
+			Sys.println(homeCoordLong + "in View Position");
 			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
 			var distance = computeDist(homeCoordLat, homeCoordLong, curCoordLat, curCoordLong).toString();
-			Sys.println(distance);
-			Sys.println("----------");
-			dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "Distance from home", Gfx.TEXT_JUSTIFY_CENTER);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, distance, Gfx.TEXT_JUSTIFY_CENTER);
+			dc.drawText(dc.getWidth()/3, dc.getHeight()/5, Gfx.FONT_SMALL, "Current", Gfx.TEXT_JUSTIFY_CENTER);
+			dc.drawText(dc.getWidth()/3, dc.getHeight()*2/5, Gfx.FONT_SMALL, curCoordLat, Gfx.TEXT_JUSTIFY_CENTER);
 			
 		} else {
 			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
@@ -74,31 +72,19 @@ class ViewPosition extends Ui.DataField {
 		var point2Lat = pt2Lat.toFloat();
 		var point2Long = pt2Long.toFloat();
 		
-		Sys.println(point1Lat + " after conversion");
-		Sys.println(point1Long + " after conversion");
-		Sys.println(point2Lat + " after conversion");
-		Sys.println(point2Long + " after conversion");
-		
 		var radius = 6371;
 		
 		//Convert to radians
-		var radLat1 = point1Lat * (3.14159/180.0);
-		var radLat2 = point2Lat * (3.14159/180.0);
-		var dLat = (point2Lat - point1Lat) * (3.14159/180.0);
-		var dLong = (point2Long - point1Long) * (3.14159/180.0);
-		
-		Sys.println("radLat1=" + radLat1);
-		Sys.println("radLat2" + radLat2);
-		Sys.println("dLat" + dLat);
-		Sys.println("dLong" + dLong);		
+		var radLat1 = point1Lat * (3.14159/180);
+		var radLat2 = point2Lat * (3.14159/180);
+		var dLat = (point2Lat - point1Lat) * (3.14159/180);
+		var dLong = (point2Long - point1Long) * (3.14159/180);
 		
 		//Use the Haversine formula to calculate the great-circle distance between two coordinates
 		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         	Math.cos(radLat1) * Math.cos(radLat2) *
         	Math.sin(dLong/2) * Math.sin(dLong/2);
-        Sys.println("a=" + a);
 		var c = 2 * atan2(Math.sqrt(a), Math.sqrt(1-a));
-		Sys.println("c=" + c);
 		var dist = radius * c;
 		return dist;
 		
