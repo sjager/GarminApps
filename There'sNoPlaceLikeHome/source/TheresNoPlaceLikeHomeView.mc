@@ -21,14 +21,14 @@ class TheresNoPlaceLikeHomeView extends Ui.View {
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 
         // Get the current time
-        var clockTime = Sys.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min]);
+        //var clockTime = Sys.getClockTime();
+        //var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min]);
 
         // Draw the time
-        dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
-        var x = dc.getWidth() / 2;
-        var y = dc.getHeight() / 2;
-        dc.drawText(x, y, Gfx.FONT_LARGE, timeString, Gfx.TEXT_JUSTIFY_CENTER);
+        //dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
+        //var x = dc.getWidth() / 2;
+        //var y = dc.getHeight() / 2;
+        //dc.drawText(x, y, Gfx.FONT_LARGE, timeString, Gfx.TEXT_JUSTIFY_CENTER);
     }
 
 }
