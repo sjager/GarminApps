@@ -13,31 +13,39 @@ class ViewPositionDelegate extends Ui.BehaviorDelegate
 	}
 }
 
-class ViewPosition extends Ui.DataField {
-	function initialize()
-	{
-		
+class ViewPosition extends Ui.DataField {	
+	//! Update the view
+	
+	
+	function onShow() {
 	}
 	
-	//! Update the view
-	function compute(info)
-	{
-		Sys.println("Compute Function");
-		var app = App.getApp();
-	
-		var homeCoordLong = app.getProperty("Home_Coord_Longitude"); 
-		//AppBase.getProperty("HomeCoords");
-		if(homeCoordLong != null)
-		{
-			return homeCoordLong;
-		} else {
-			return "none";
-		}
+	function onLayout(dc) {
 	}
 	
 	function onUpdate(dc)
 	{
-		//dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-		//dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		Sys.println("View Position Screen");
+		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLUE);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		
+		var app = App.getApp();
+		var homeCoordLong = app.getProperty("Home_Coords");
+		if(homeCoordLong != null)
+		{
+			Sys.println(homeCoordLong + "in View Position");
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_SMALL, homeCoordLong, Gfx.TEXT_JUSTIFY_CENTER);
+		} else {
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+			var text = "No Home Position Recorded";
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_SMALL, text, Gfx.TEXT_JUSTIFY_CENTER);
+		}
+	}
+	
+	function compute(info)
+	{
+		Sys.println("Compute Function");
+		
 	}
 }

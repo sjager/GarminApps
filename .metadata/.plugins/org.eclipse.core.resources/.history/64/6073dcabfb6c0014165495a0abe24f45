@@ -1,0 +1,52 @@
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
+using Toybox.Lang as Lang;
+using Toybox.Application as App;
+
+class ViewPositionDelegate extends Ui.BehaviorDelegate
+{
+	function onMenu()
+	{
+		Sys.println("Position");
+		Ui.pushView(new ChooseHome(), new ChooseHomeDelegate(), Ui.SLIDE_LEFT);
+	}
+}
+
+class ViewPosition extends Ui.DataField {	
+	//! Update the view
+	
+	
+	function onShow() {
+	}
+	
+	function onLayout(dc) {
+	}
+	
+	function onUpdate(dc)
+	{
+		Sys.println("View Position Screen");
+		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLUE);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		
+		var app = App.getApp();
+		var homeCoordLong = app.getProperty("Home_Coords");
+		if(homeCoordLong != null)
+		{
+			Sys.println(homeCoordLong + "in View Position");
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLUE);
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_LARGE, homeCoordLong, Gfx.TEXT_JUSTIFY_LEFT);
+		} else {
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLUE);
+			var text = "no";
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_LARGE, text, Gfx.TEXT_JUSTIFY_LEFT);
+		}
+		
+	}
+	
+	function compute(info)
+	{
+		Sys.println("Compute Function");
+		
+	}
+}

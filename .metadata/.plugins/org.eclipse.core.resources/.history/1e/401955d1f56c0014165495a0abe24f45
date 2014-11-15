@@ -1,0 +1,63 @@
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
+using Toybox.Lang as Lang;
+using Toybox.Application as App;
+using Toybox.Toybox.Timer as Timer
+
+class ViewPositionDelegate extends Ui.BehaviorDelegate
+{
+	function onMenu()
+	{
+		Timer.stop();
+		Sys.println("Position");
+		Ui.pushView(new ChooseHome(), new ChooseHomeDelegate(), Ui.SLIDE_LEFT);
+	}
+}
+
+class ViewPosition extends Ui.View {
+	var homeCoordString = null;
+	var coordLatitude = null;
+	var coordLongitutde = null;
+	
+	//! Update the view
+	function compute(dc)
+	{
+		Sys.println("Compute Function");
+		var app = App.getApp();
+	
+		homeCoordString = app.getProperty("Home_Coord_Longitude"); 
+		if(homeCoordString != null)
+		{
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Ui.FONT_SMALL, homeCoordString);
+		}
+		//AppBase.getProperty("HomeCoords");
+		//if(homeCoordLong != null)
+		//{
+		//	return homeCoordLong;
+		//} else {
+		//	return "none";
+		//}
+	}
+	//! Load your resources here
+    function onLayout(dc) {
+    }
+
+    //! Restore the state of the app and prepare the view to be shown
+    function onShow() {
+    }
+
+	function onUpdate(dc)
+	{
+		Sys.println("HERE");
+		dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLUE);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		homeCoordString = app.getProperty("Home_Coord_Longitude"); 
+		if(homeCoordString != null)
+		{
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Ui.FONT_SMALL, homeCoordString);
+		}
+		//Timer.start(compute(dc), 1, true);
+		
+	}
+}

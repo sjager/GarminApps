@@ -16,7 +16,7 @@ class TheresNoPlaceLikeHomeApp extends App.AppBase {
 	{
 		//Sys.println("Position " +
 		//info.position.toGeoString(Position.GEO_DM));
-
+		Sys.println("Set Coords");
 		var app = App.getApp();
 		app.setProperty("Current_Coords", info.position.toGeoString(Position.GEO_DM));
 		//app.setProperty("Current_Coord_Latitude", info.position.toDegrees()[0]);

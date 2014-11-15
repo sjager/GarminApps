@@ -3,27 +3,41 @@
 <pcToLineNum>
 <entry filename="source\\ViewPosition.mc" lineNum="11" pc="268435458" symbol="onMenu"/>
 <entry filename="source\\ViewPosition.mc" lineNum="12" pc="268435479" symbol="onMenu"/>
-<entry filename="source\\ViewPosition.mc" lineNum="25" pc="268435558" symbol="compute"/>
-<entry filename="source\\ViewPosition.mc" lineNum="26" pc="268435579" symbol="compute"/>
-<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435596" symbol="compute"/>
-<entry filename="source\\ViewPosition.mc" lineNum="30" pc="268435614" symbol="compute"/>
-<entry filename="source\\ViewPosition.mc" lineNum="32" pc="268435621" symbol="compute"/>
-<entry filename="source\\ViewPosition.mc" lineNum="34" pc="268435627" symbol="compute"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="12" pc="268435639" symbol="onStart"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="20" pc="268435654" symbol="onPosition"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="21" pc="268435671" symbol="onPosition"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="28" pc="268435722" symbol="initializeListener"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="39" pc="268435767" symbol="getInitialView"/>
-<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268435838" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="12" pc="268435859" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="17" pc="268435890" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268435917" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="20" pc="268435934" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="23" pc="268435961" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="26" pc="268435979" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="27" pc="268436000" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="44" pc="268436041" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="45" pc="268436077" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435561" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="29" pc="268435582" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="30" pc="268435618" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="32" pc="268435662" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="33" pc="268435679" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="34" pc="268435697" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="36" pc="268435704" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="37" pc="268435728" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="38" pc="268435764" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="40" pc="268435839" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="41" pc="268435875" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="42" pc="268435882" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="48" pc="268435957" symbol="compute"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="12" pc="268435982" symbol="onStart"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="19" pc="268435997" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="20" pc="268436018" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="21" pc="268436035" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="28" pc="268436086" symbol="initializeListener"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="39" pc="268436131" symbol="getInitialView"/>
+<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268436202" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="12" pc="268436223" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="17" pc="268436254" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268436281" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="20" pc="268436298" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="21" pc="268436325" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="22" pc="268436343" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="23" pc="268436362" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="24" pc="268436394" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="41" pc="268436435" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="42" pc="268436452" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="43" pc="268436488" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="45" pc="268436532" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="46" pc="268436568" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="47" pc="268436575" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="49" pc="268436647" symbol="onUpdate"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -701,15 +715,19 @@
 <functionEntry name="onMenu">
 <documentation/>
 </functionEntry>
-<functionEntry name="initialize">
+<functionEntry name="onShow">
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onLayout">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onUpdate">
+<param id="dc"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="compute">
 <param id="info"/>
-<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onUpdate">
-<param id="dc"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="onStart">
