@@ -10,8 +10,8 @@ class TheresNoPlaceLikeHomeApp extends App.AppBase {
     function onPosition(info)
 	{
 		// Fake data since data types are not precise enough to use simulated data
-		var fakeLats = [40.7127, 37.7833, 40.8106];
-		var fakeLongs = [-74.0058, -122.4167, -96.6803];
+		var fakeLats = [70, 27.357, -51.33];
+		var fakeLongs = [1.26, -33.992, 107];
 		var rand = Math.rand()%3;
 		
 		// Store data into data store
