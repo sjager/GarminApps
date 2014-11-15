@@ -3,6 +3,6 @@
 <stringAttribute key="connectiq.debugInfo" value="C:\Users\Sawyer\Documents\GitHub\GarminApps\There'sNoPlaceLikeHome\bin\There'sNoPlaceLikeHome.prg.debug.xml"/>
 <stringAttribute key="connectiq.prg" value="C:\Users\Sawyer\Documents\GitHub\GarminApps\There'sNoPlaceLikeHome\bin\There'sNoPlaceLikeHome.prg"/>
 <stringAttribute key="connectiq.project" value="There'sNoPlaceLikeHome"/>
-<stringAttribute key="connectiq.targetDevice" value="square_watch"/>
+<stringAttribute key="connectiq.targetDevice" value="round_watch"/>
 <stringAttribute key="connectiq.workingDir" value="C:\Users\Sawyer\Documents\GitHub\GarminApps\There'sNoPlaceLikeHome"/>
 </launchConfiguration>

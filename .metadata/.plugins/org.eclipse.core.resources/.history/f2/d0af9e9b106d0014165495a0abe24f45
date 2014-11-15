@@ -53,7 +53,7 @@ class ViewPosition extends Ui.DataField {
 		} else {
 			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
 			dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, "No home position recorded", Gfx.TEXT_JUSTIFY_CENTER);
-			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, "Press Menu", Gfx.TEXT_JUSTIFY_CENTER);
+			dc.drawText(dc.getWidth()/2, dc.getHeight()*2/3, Gfx.FONT_SMALL, "Press \"Menu\" to pick your home position", Gfx.TEXT_JUSTIFY_CENTER);
 		}
 	}
 	
