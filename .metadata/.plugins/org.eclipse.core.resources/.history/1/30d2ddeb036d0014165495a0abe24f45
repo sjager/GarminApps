@@ -1,0 +1,65 @@
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
+using Toybox.Lang as Lang;
+using Toybox.Application as App;
+
+var timer;
+
+class ViewPositionDelegate extends Ui.BehaviorDelegate
+{
+	function onMenu()
+	{
+		timer.stop();
+		Sys.println("Position");
+		Ui.pushView(new ChooseHome(), new ChooseHomeDelegate(), Ui.SLIDE_LEFT);
+	}
+}
+
+class ViewPosition extends Ui.DataField {	
+	//! Update the view
+	function redraw() {
+		Ui.requestUpdate();
+	}
+
+	function initialize() {
+		timer = new Timer.Timer();
+    	timer.start( method(:redraw), 500, true);
+	}
+	
+	function onShow() {
+	}
+	
+	function onLayout(dc) {
+	}
+	
+	function onUpdate(dc)
+	{
+		Sys.println("View Position Screen");
+		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLUE);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		
+		var app = App.getApp();
+		var homeCoordLong = app.getProperty("Home_Coords");
+		var homeCoodLat = app.getProperty("Home_Coord_Latitude");
+		var homeCoodLong = app.getProperty("Home_Coord_Longitude");
+		var curCoodLat = app.getProperty("Home_Coord_Latitude");
+		var curCoodLong = app.getProperty("Home_Coord_Longitude");
+		if(homeCoordLong != null)
+		{
+			Sys.println(homeCoordLong + "in View Position");
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_SMALL, homeCoordLong, Gfx.TEXT_JUSTIFY_CENTER);
+		} else {
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+			var text = "No Home Position Recorded";
+			dc.drawText(dc.getWidth()/2, dc.getHeight()/2, Gfx.FONT_SMALL, text, Gfx.TEXT_JUSTIFY_CENTER);
+		}
+	}
+	
+	function compute(info)
+	{
+		Sys.println("Compute Function");
+		
+	}
+}

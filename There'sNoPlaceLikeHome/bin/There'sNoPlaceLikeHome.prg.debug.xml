@@ -1,43 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="source\\ViewPosition.mc" lineNum="11" pc="268435458" symbol="onMenu"/>
-<entry filename="source\\ViewPosition.mc" lineNum="12" pc="268435479" symbol="onMenu"/>
-<entry filename="source\\ViewPosition.mc" lineNum="28" pc="268435561" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="29" pc="268435582" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="30" pc="268435618" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="32" pc="268435662" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="33" pc="268435679" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="34" pc="268435697" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="36" pc="268435704" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="37" pc="268435728" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="38" pc="268435764" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="40" pc="268435839" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="41" pc="268435875" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="42" pc="268435882" symbol="onUpdate"/>
-<entry filename="source\\ViewPosition.mc" lineNum="48" pc="268435957" symbol="compute"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="12" pc="268435982" symbol="onStart"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="19" pc="268435997" symbol="onPosition"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="20" pc="268436018" symbol="onPosition"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="21" pc="268436035" symbol="onPosition"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="28" pc="268436086" symbol="initializeListener"/>
-<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="39" pc="268436131" symbol="getInitialView"/>
-<entry filename="source\\ChooseHome.mc" lineNum="11" pc="268436202" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="12" pc="268436223" symbol="onPreviousPage"/>
-<entry filename="source\\ChooseHome.mc" lineNum="17" pc="268436254" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="19" pc="268436281" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="20" pc="268436298" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="21" pc="268436325" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="22" pc="268436343" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="23" pc="268436362" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="24" pc="268436394" symbol="onKey"/>
-<entry filename="source\\ChooseHome.mc" lineNum="41" pc="268436435" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="42" pc="268436452" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="43" pc="268436488" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="45" pc="268436532" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="46" pc="268436568" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="47" pc="268436575" symbol="onUpdate"/>
-<entry filename="source\\ChooseHome.mc" lineNum="49" pc="268436647" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="13" pc="268435458" symbol="onMenu"/>
+<entry filename="source\\ViewPosition.mc" lineNum="14" pc="268435476" symbol="onMenu"/>
+<entry filename="source\\ViewPosition.mc" lineNum="15" pc="268435497" symbol="onMenu"/>
+<entry filename="source\\ViewPosition.mc" lineNum="22" pc="268435573" symbol="redraw"/>
+<entry filename="source\\ViewPosition.mc" lineNum="30" pc="268435595" symbol="onShow"/>
+<entry filename="source\\ViewPosition.mc" lineNum="31" pc="268435631" symbol="onShow"/>
+<entry filename="source\\ViewPosition.mc" lineNum="40" pc="268435678" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="41" pc="268435690" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="42" pc="268435711" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="43" pc="268435747" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="45" pc="268435791" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="47" pc="268435808" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="48" pc="268435826" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="49" pc="268435844" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="50" pc="268435862" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="51" pc="268435880" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="53" pc="268435897" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="54" pc="268435921" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="55" pc="268435945" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="56" pc="268435981" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="57" pc="268436056" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="58" pc="268436134" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="59" pc="268436218" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="60" pc="268436299" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="61" pc="268436377" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="63" pc="268436464" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="64" pc="268436500" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="65" pc="268436507" symbol="onUpdate"/>
+<entry filename="source\\ViewPosition.mc" lineNum="71" pc="268436582" symbol="compute"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="12" pc="268436606" symbol="onStart"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="19" pc="268436621" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="20" pc="268436642" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="21" pc="268436659" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="23" pc="268436707" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="24" pc="268436756" symbol="onPosition"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="29" pc="268436808" symbol="initializeListener"/>
+<entry filename="source\\TheresNoPlaceLikeHomeApp.mc" lineNum="40" pc="268436853" symbol="getInitialView"/>
+<entry filename="source\\ChooseHome.mc" lineNum="14" pc="268436924" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="15" pc="268436942" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="16" pc="268436963" symbol="onPreviousPage"/>
+<entry filename="source\\ChooseHome.mc" lineNum="21" pc="268436994" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="22" pc="268437012" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="24" pc="268437039" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="25" pc="268437056" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="26" pc="268437083" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="27" pc="268437110" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="28" pc="268437137" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="29" pc="268437156" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="30" pc="268437175" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="31" pc="268437194" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="32" pc="268437226" symbol="onKey"/>
+<entry filename="source\\ChooseHome.mc" lineNum="40" pc="268437261" symbol="redraw"/>
+<entry filename="source\\ChooseHome.mc" lineNum="44" pc="268437280" symbol="initialize"/>
+<entry filename="source\\ChooseHome.mc" lineNum="45" pc="268437314" symbol="initialize"/>
+<entry filename="source\\ChooseHome.mc" lineNum="60" pc="268437364" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="61" pc="268437376" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="62" pc="268437393" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="63" pc="268437420" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="64" pc="268437456" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="66" pc="268437500" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="67" pc="268437536" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="68" pc="268437543" symbol="onUpdate"/>
+<entry filename="source\\ChooseHome.mc" lineNum="69" pc="268437615" symbol="onUpdate"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -62,6 +88,7 @@
 <entry id="33274" symbol="radians"/>
 <entry id="33218" method="true" symbol="testTypeCreation"/>
 <entry field="true" id="32916" symbol="SUB_SPORT_STREET"/>
+<entry id="15" method="true" symbol="redraw"/>
 <entry id="2" module="true" symbol="globals_Rez"/>
 <entry field="true" id="33050" symbol="KEY_RIGHT"/>
 <entry field="true" id="32964" symbol="COLOR_ORANGE"/>
@@ -70,7 +97,7 @@
 <entry field="true" id="32940" symbol="SUB_SPORT_CARDIO_TRAINING"/>
 <entry id="33316" symbol="&lt;deu&gt;"/>
 <entry id="32803" method="true" symbol="makeImageRequest"/>
-<entry id="14" module="true" symbol="Menus"/>
+<entry id="16" module="true" symbol="Menus"/>
 <entry id="3" module="true" symbol="globals_Rez_Drawables"/>
 <entry id="32775" module="true" symbol="Toybox_Position"/>
 <entry id="33312" symbol="&lt;dut&gt;"/>
@@ -90,7 +117,7 @@
 <entry id="33400" symbol="mHiddenData"/>
 <entry id="33208" method="true" symbol="testDiv"/>
 <entry field="true" id="32841" symbol="QUALITY_POOR"/>
-<entry id="9" object="true" symbol="ViewPosition"/>
+<entry id="10" object="true" symbol="ViewPosition"/>
 <entry id="33220" method="true" symbol="testBooleanOperations"/>
 <entry id="33076" object="true" symbol="Menu"/>
 <entry id="33322" symbol="&lt;pol&gt;"/>
@@ -122,7 +149,7 @@
 <entry field="true" id="32859" symbol="speed"/>
 <entry field="true" id="32835" symbol="GEO_DEG"/>
 <entry id="33177" symbol="dayHash"/>
-<entry id="8" object="true" symbol="ViewPositionDelegate"/>
+<entry id="9" object="true" symbol="ViewPositionDelegate"/>
 <entry field="true" id="33127" symbol="behavior"/>
 <entry field="true" id="33387" symbol="rssi"/>
 <entry id="33129" symbol="mDirection"/>
@@ -174,7 +201,7 @@
 <entry id="32795" module="true" symbol="Position"/>
 <entry id="32987" method="true" symbol="fillPolygon"/>
 <entry field="true" id="33349" symbol="MSG_ID_OPEN_CHANNEL"/>
-<entry id="17" method="true" symbol="initializeListener"/>
+<entry id="19" method="true" symbol="initializeListener"/>
 <entry field="true" id="32954" symbol="FONT_TINY"/>
 <entry id="33183" symbol="getDayHash"/>
 <entry id="33305" symbol="color"/>
@@ -192,7 +219,7 @@
 <entry field="true" id="33378" symbol="DATA_PAYLOAD_LENGTH"/>
 <entry id="32988" method="true" symbol="fillRectangle"/>
 <entry id="32850" object="true" symbol="Info"/>
-<entry id="15" module="true" symbol="Layouts"/>
+<entry id="17" module="true" symbol="Layouts"/>
 <entry id="32865" object="true" symbol="Stats"/>
 <entry field="true" id="32953" symbol="FONT_XTINY"/>
 <entry id="32989" method="true" symbol="fillRoundedRectangle"/>
@@ -240,6 +267,7 @@
 <entry field="true" id="33261" symbol="averageHeartRate"/>
 <entry id="33123" symbol="mJustification"/>
 <entry id="33285" symbol="september"/>
+<entry field="true" id="8" symbol="timer"/>
 <entry field="true" id="33084" symbol="NUMBER_PICKER_CALORIES"/>
 <entry field="true" id="33383" symbol="deviceNumber"/>
 <entry id="32999" object="true" symbol="Double"/>
@@ -330,7 +358,7 @@
 <entry id="32983" method="true" symbol="drawBitmap"/>
 <entry id="32855" method="true" symbol="toDegrees"/>
 <entry field="true" id="33099" symbol="PUSH_VIEW"/>
-<entry id="11" object="true" symbol="TheresNoPlaceLikeHomeApp"/>
+<entry id="12" object="true" symbol="TheresNoPlaceLikeHomeApp"/>
 <entry id="33206" method="true" symbol="testSub"/>
 <entry field="true" id="32939" symbol="SUB_SPORT_INDOOR_SKIING"/>
 <entry field="true" id="33401" symbol="messagePeriod"/>
@@ -413,7 +441,7 @@
 <entry id="32976" object="true" symbol="Dc"/>
 <entry id="32829" method="true" symbol="pow"/>
 <entry field="true" id="33369" symbol="NETWORK_PLUS"/>
-<entry id="13" object="true" symbol="ChooseHome"/>
+<entry id="14" object="true" symbol="ChooseHome"/>
 <entry field="true" id="32910" symbol="SPORT_MOUNTAINEERING"/>
 <entry field="true" id="33244" symbol="startTime"/>
 <entry field="true" id="32876" symbol="min"/>
@@ -513,7 +541,7 @@
 <entry field="true" id="33181" symbol="SECONDS_PER_MINUTE"/>
 <entry id="33281" symbol="may"/>
 <entry field="true" id="33419" symbol="DEFAULT_RADIO_FREQUENCY"/>
-<entry field="true" id="10" symbol="HOME_COORDS"/>
+<entry field="true" id="11" symbol="HOME_COORDS"/>
 <entry field="true" id="33108" symbol="width"/>
 <entry id="33161" method="true" symbol="onNextPage"/>
 <entry field="true" id="32842" symbol="QUALITY_USABLE"/>
@@ -571,7 +599,7 @@
 <entry field="true" id="33246" symbol="timerTime"/>
 <entry field="true" id="33268" symbol="swimEfficency"/>
 <entry id="33186" method="true" symbol="duration"/>
-<entry id="16" method="true" symbol="onPosition"/>
+<entry id="18" method="true" symbol="onPosition"/>
 <entry field="true" id="33416" symbol="DEFAULT_DEVICE_TYPE"/>
 <entry id="33242" method="true" symbol="getActivityInfo"/>
 <entry field="true" id="33264" symbol="averageCadence"/>
@@ -634,7 +662,7 @@
 <entry id="33114" symbol="mInitialValue"/>
 <entry field="true" id="33039" symbol="KEY_LIGHT"/>
 <entry field="true" id="33384" symbol="deviceType"/>
-<entry id="12" object="true" symbol="ChooseHomeDelegate"/>
+<entry id="13" object="true" symbol="ChooseHomeDelegate"/>
 <entry field="true" id="33348" symbol="MSG_ID_RESET_SYSTEM"/>
 <entry field="true" id="32937" symbol="SUB_SPORT_EXERCISE"/>
 <entry id="32992" method="true" symbol="getWidth"/>
@@ -715,8 +743,14 @@
 <functionEntry name="onMenu">
 <documentation/>
 </functionEntry>
-<functionEntry name="onShow">
+<functionEntry name="redraw">
 <documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="initialize">
+<documentation/>
+</functionEntry>
+<functionEntry name="onShow">
+<documentation/>
 </functionEntry>
 <functionEntry name="onLayout">
 <param id="dc"/>
@@ -751,6 +785,12 @@
 </functionEntry>
 <functionEntry name="onKey">
 <param id="evt"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="redraw">
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize">
 <documentation/>
 </functionEntry>
 <functionEntry name="onLayout">

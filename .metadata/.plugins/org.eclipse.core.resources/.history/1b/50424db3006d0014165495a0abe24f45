@@ -1,0 +1,68 @@
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
+using Toybox.Lang as Lang;
+using Toybox.Application as App;
+using Toybox.Timer as Timer;
+
+class ChooseHomeDelegate extends Ui.BehaviorDelegate
+{
+	var timer = new Timer.Timer();
+
+	function onPreviousPage()
+	{
+		if(timer != null){
+			timer.stop();
+		}
+		Sys.println("Menu");
+		Ui.popView(Ui.SLIDE_RIGHT);
+	}
+	
+	function onKey(evt)
+	{
+		if(evt.getKey() == Ui.KEY_ENTER)
+		{
+			var app = App.getApp();
+			var thing = app.getProperty("Current_Coords").toString();
+			var thing1 = app.getProperty("Current_Coord_Latitude").toString();
+			var thing2 = app.getProperty("Current_Coord_Longitude").toString();
+			//Sys.println(thing);
+			//Sys.println("-----");
+			//Sys.println(thing1);
+			//Sys.println("-----");
+			//Sys.println(thing2);
+			app.setProperty("Home_Coords", thing);
+			Sys.println(app.getProperty("Home_Coords"));
+			Ui.popView(Ui.SLIDE_RIGHT);
+		}
+	}
+}
+
+class ChooseHome extends Ui.View {
+	//! Load your resources here
+    function onLayout(dc) {
+    }
+
+    //! Restore the state of the app and prepare the view to be shown
+    function onShow() {
+    }
+
+    //! Update the view
+	function onUpdate(dc)
+	{
+		timer.start(redraw(dc), 1, true);
+	}
+	
+	function redraw(dc)
+	{
+		var app = App.getApp();
+		var currentCoords = app.getProperty("Current_Coords").toString();
+		dc.setColor(Gfx.COLOR_DK_RED, Gfx.COLOR_DK_RED);
+		dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+		
+		dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+		var text = "Choose a home position:";
+		dc.drawText(dc.getWidth()/2, dc.getHeight()/3, Gfx.FONT_SMALL, text, Gfx.TEXT_JUSTIFY_CENTER);
+		dc.drawText(dc.getWidth()/2, dc.getHeight()/3*2, Gfx.FONT_SMALL, currentCoords, Gfx.TEXT_JUSTIFY_CENTER);
+	}
+}
